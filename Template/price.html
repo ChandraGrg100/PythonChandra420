@@ -1,21 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-		  	  
 			<!-- start banner Area -->
 			<section class="about-banner">
-				<div class="container">				
+				<div class="container">
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Pricing Plan				
-							</h1>	
+								Pricing Plan
+							</h1>
 							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="price.html"> Pricing Plan</a></p>
-						</div>	
+						</div>
 					</div>
 				</div>
 			</section>
-			<!-- End banner Area -->	
+			<!-- End banner Area -->
 
 			<!-- Start price Area -->
 			<section class="price-area section-gap">
@@ -27,7 +26,7 @@
 								<p>When someone does something that they know that they shouldn’t do, did they.</p>
 							</div>
 						</div>
-					</div>					
+					</div>
 					<div class="row">
 						<div class="col-lg-3 col-md-6 single-price">
 							<div class="top-part">
@@ -43,7 +42,7 @@
 								</ul>
 							</div>
 							<div class="bottom-part">
-								<h1>£199.00</h1>
+								<h1>£{{economy}}</h1>
 								<a class="price-btn text-uppercase" href="#">Buy Now</a>
 							</div>
 						</div>
@@ -61,7 +60,7 @@
 								</ul>
 							</div>
 							<div class="bottom-part">
-								<h1>£299.00</h1>
+								<h1>£{{business}}</h1>
 								<a class="price-btn text-uppercase" href="#">Buy Now</a>
 							</div>
 						</div>
@@ -79,7 +78,7 @@
 								</ul>
 							</div>
 							<div class="bottom-part">
-								<h1>£399.00</h1>
+								<h1>£{{premium}}</h1>
 								<a class="price-btn text-uppercase" href="#">Buy Now</a>
 							</div>
 						</div>
@@ -97,14 +96,14 @@
 								</ul>
 							</div>
 							<div class="bottom-part">
-								<h1>£499.00</h1>
+								<h1>£{{exclusive}}</h1>
 								<a class="price-btn text-uppercase" href="#">Buy Now</a>
 							</div>
-						</div>																		
+						</div>
 					</div>
-				</div>	
+				</div>
 			</section>
-			<!-- End price Area -->		
+			<!-- End price Area -->
 
 			<!-- Start faq Area -->
 			<section class="faq-area pb-120">
@@ -116,7 +115,7 @@
 								<p>When someone does something that they know that they shouldn’t do, did they really have a choice. Maybe what I mean to say is did they really have a chance. You can take two people.</p>
 							</div>
 						</div>
-					</div>						
+					</div>
 					<div class="row justify-content-center">
 						<div class="col-lg-8">
 						<dl class="accordion">
@@ -151,11 +150,11 @@
 							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. Proin ac metus diam.
 							</dd>
 						</dl>
-       
+
 						</div>
 					</div>
-				</div>	
+				</div>
 			</section>
 			<!-- End faq Area -->
-			
+
 {% endblock %}

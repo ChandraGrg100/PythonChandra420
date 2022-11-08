@@ -3,18 +3,18 @@
 {% block content %}
 			<!-- start banner Area -->
 			<section class="about-banner">
-				<div class="container">				
+				<div class="container">
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								About Me				
-							</h1>	
+								About Me
+							</h1>
 							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="about.html"> About Me</a></p>
-						</div>	
+						</div>
 					</div>
 				</div>
 			</section>
-			<!-- End banner Area -->	
+			<!-- End banner Area -->
 
 			<!-- Start home-about Area -->
 			<section class="home-about-area section-gap">
@@ -33,15 +33,15 @@
 						</div>
 						<div class="col-lg-12 pt-60">
 							<p>
-								It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has been achieving great heights so far as its popularity and technological advancement are concerned. The history of video game is as interesting as a fairy tale. 
+								It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has been achieving great heights so far as its popularity and technological advancement are concerned. The history of video game is as interesting as a fairy tale.
 							</p>
 							<p>
-								The quality of today’s video game was not at all there when video game first conceptualized and played ever. During the formulative years, video games were created by using various interactive electronic devices with various display formats. The first ever video game was designed in 1947 by Thomas T. Goldsmith Jr. 								
+								The quality of today’s video game was not at all there when video game first conceptualized and played ever. During the formulative years, video games were created by using various interactive electronic devices with various display formats. The first ever video game was designed in 1947 by Thomas T. Goldsmith Jr.
 							</p>
-							<h4 class="pt-30">Tools Expertness</h4>	
+							<h4 class="pt-30">Tools Expertness</h4>
 						</div>
 					</div>
-					<div class="row skillbar-wraps">					
+					<div class="row skillbar-wraps">
 						<div class="col-lg-6 skill-left">
 							<div class="single-skill">
 								<p>
@@ -60,7 +60,7 @@
 									Illustrator 70%
 								</p>
 								<div class="skill" data-width="70"></div>
-							</div>																				
+							</div>
 						</div>
 						<div class="col-lg-6 skill-right">
 							<div class="single-skill">
@@ -68,19 +68,19 @@
 									Sublime 95%
 								</p>
 								<div class="skill" data-width="95"></div>
-							</div>								
+							</div>
 							<div class="single-skill">
 								<p>
 									Sketch 85%
 								</p>
 								<div class="skill" data-width="85"></div>
 							</div>
-							
+
 						</div>
 					</div>
-				</div>	
+				</div>
 			</section>
-			<!-- End home-about Area -->	
+			<!-- End home-about Area -->
 
 			<!-- Start timeline Area -->
 			<section class="timeline pb-120">
@@ -91,7 +91,7 @@
                         <p>Who are in extremely love with eco friendly system.</p>
                     </div>
                 </div>
-            </div>				
+            </div>
 			  <ul>
 			    <li>
 			      <div class="content">
@@ -139,7 +139,7 @@
 			      </div>
 			    </li>
 			  </ul>
-			</section>		
+			</section>
 
 			<!-- End timeline Area -->
 
@@ -157,35 +157,25 @@
 		            </div>
 		            <div class="row">
 		                <div class="active-testimonial">
+							{% for feedback in feedbacks %}
 		                    <div class="single-testimonial item d-flex flex-row">
 		                        <div class="thumb">
-		                            <img class="img-fluid" src="img/elements/user1.png" alt="">
+		                            <img class="img-fluid" src="{{feedback.image}}" style = "height:100px; width:100px;" alt="">
 		                        </div>
 		                        <div class="desc">
 		                            <p>
-		                                Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.		     
+		                              {{feedback.comment}}
 		                            </p>
-		                            <h4>Harriet Maxwell</h4>
-		                            <p>CEO at Google</p>
+		                            <h4>{{feedback.name}}</h4>
+		                            <p>{{feedback.post}}</p>
 		                        </div>
 		                    </div>
-		                    <div class="single-testimonial item d-flex flex-row">
-		                        <div class="thumb">
-		                            <img class="img-fluid" src="img/elements/user2.png" alt="">
-		                        </div>
-		                        <div class="desc">
-		                            <p>
-		                                A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
-		                            </p>
-		                            <h4>Carolyn Craig</h4>
-		                            <p>CEO at Facebook</p>
-		                        </div>
-		                    </div>
+		                    {% endfor %}
 		                </div>
 		            </div>
 		        </div>
 		    </section>
-		    <!-- End testimonial Area -->			
+		    <!-- End testimonial Area -->
 
 		    <!-- Start brands Area -->
 		    <section class="brands-area">
@@ -193,7 +183,7 @@
 		            <div class="brand-wrap">
 		                <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
 		                    <div class="col single-brand">
-		                        <a href="#"><img class="mx-auto" src="{% static 'img/l1.png' %}" alt=""></a>
+		                        <a href="#"><img class="mx-auto" src="img/l1.png" alt=""></a>
 		                    </div>
 		                    <div class="col single-brand">
 		                        <a href="#"><img class="mx-auto" src="img/l2.png" alt=""></a>
@@ -211,6 +201,6 @@
 		            </div>
 		        </div>
 		    </section>
-		    <!-- End brands Area -->	
+		    <!-- End brands Area -->
 
-{% endblock %}
+       {% endblock %}
